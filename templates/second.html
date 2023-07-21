@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>セカンドページ 写真4枚ページ</title>
+    <style>
+        /* グリッドを作成 */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            /* 写真間の間隔を調整 */
+        }
+        .photo-grid1 {
+            display: flex;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 10px;
+            /* 写真間の間隔を調整 */
+            justify-content: center;
+            align-items: center;
+            /* 画像をセンター寄せ */
+        }
+
+        /* 写真のサイズを調整（例） */
+        .photo-grid img {
+            width: 100%;
+            height: auto;
+        }
+        /* 任意の大きさに変更してください */
+        .title {
+            font-size: 30px;
+            text-align: center; /* Center-align the title */
+            margin: 20px 0; /* Add some margin for spacing */
+        }
+
+        /* ボタンのサイズを大きく */
+        .centered-button input[type="submit"] {
+            padding: 70px 100px; /* 上下左右の余白を設定 */
+            font-size: 70px; /* フォントサイズを変更 */
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="photo-grid2">
+        <img src="../static/images/セカンド ロゴ1photo.jpg">
+    </div>
+
+
+    <div class="title">
+        {{title}}
+    </div>
+    <div class="photo-grid">
+        <img src="{{photo1}}" alt="写真1">
+        <img src="{{photo2}}" alt="写真2">
+        <img src="{{photo3}}" alt="写真3">
+        <img src="{{photo4}}" alt="写真4">
+
+        <! ここまで 写真掲載 コード>
+    </div>
+        <! ここから トップに戻るボタン コード>
+
+    <p><! ここはテキスト></p>
+    <p>&nbsp;</p> <!-- 空の段落 -->
+    <p><! ここはテキスト></p>
+    <p><! ここはテキスト></p>
+    <p>&nbsp;</p> <!-- 空の段落 -->
+
+    <form action="/second">
+    <div style="display: flex; justify-content: center;">
+        <input type="submit" value="秀衡塗の使い方トップに戻る">
+    </div>
+    </form>
+
+    <p>&nbsp;</p> <!-- 空の段落 -->
+
+    </div>
+
+    <div class="photo-grid1">
+        <img src="../static/images/セカンド ロゴphoto.jpg">
+    </div>
+
+</body>
+
+</html>
