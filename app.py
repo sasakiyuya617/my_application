@@ -47,9 +47,11 @@ def result():
         "second.html", title=title, photo1=photo1, photo2=photo2, photo3=photo3, photo4=photo4
     )
 
+
 @app.route('/second')
 def second():
     return render_template('top.html')
 
+
 if __name__ == "__main__":
-    app.run(port=8000, debug=True)
+    app.run(port=8000, debug=True, host='0.0.0.0')
