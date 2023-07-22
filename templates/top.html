@@ -23,6 +23,17 @@
             /* 他のスタイルがあればここに追加 */
         }
         .centerd-div{margin-left: 10%;}
+
+            /* レスポンシブ対応用のメディアクエリ */
+            @media screen and (max-width: 800px) {
+                body {
+                  background-image: url("../static/images/トップ背景スマホphoto1.jpg");
+                }
+
+                h1 {
+                   font-size: 24px; /* 画面サイズが800px以下の場合、文字サイズを24pxに変更 */
+                }
+        }
     </style>
 </head>
 
@@ -78,5 +89,3 @@
 </div>
 </body>
 </html>
-
-

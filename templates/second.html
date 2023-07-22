@@ -22,7 +22,24 @@
             align-items: center;
             /* 画像をセンター寄せ */
         }
+        /* レスポンシブ対応用のメディアクエリ */
+        @media screen and (max-width: 600px) {
+            photo-grid1 {
+                background-image: url("../static/images/セカンド 翁知屋ロゴ透過photo.jpgg");
+            }
+            h1 {
+                font-size: 24px; /* 画面サイズが800px以下の場合、文字サイズを24pxに変更 */
+            }
+            .shikki_img1 {
+                display: inline-block;
+                width: 50%;
+            }
+        }
+        .photo-grid2 {
+            text-align: center; /* Center-align the title */
+        }
 
+        
         /* 写真のサイズを調整（例） */
         .photo-grid img {
             width: 100%;
@@ -45,9 +62,8 @@
         /* 任意の大きさに変更してください */
         .title2 {
             font-size: 20px;
-            text-align: left; /* Center-align the title1 */
-            margin-left: 60px;
-            margin-bottom: 30px;
+           /* Center-align the title1 */
+            margin: 0 40px;
         }
         .header {
             margin:0 auto;
@@ -67,14 +83,36 @@
             font-size: 70px; /* フォントサイズを変更 */
         }
 
+            /* レスポンシブ対応用のメディアクエリ */
+        @media screen and (max-width: 600px) {
+            photo-grid2 {
+                background-image: url("../static/images/セカンドスマホ秀衡塗ロゴ透過photo.jpg");
+            }
+            h1 {
+                font-size: 24px; /* 画面サイズが800px以下の場合、文字サイズを24pxに変更 */
+            }
+            .shikki_img {
+                display: inline-block;
+                width: 65%;
+            }
+            .shikki_img2 {
+                display: inline-block;
+                width: 100%;
+            }
+            .wrapper {
+                flex-direction: column;
+            }
+            .title2 {
+                margin: initial;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div class="photo-grid2">
-        <img src="../static/images/セカンド ロゴ1photo.jpg">
+        <img class="shikki_img" src="../static/images/セカンド秀衡塗ロゴ透過photo.jpg">
     </div>
-
 
     <div class="title">
         {{title}}
@@ -91,10 +129,6 @@
 
     <p><! ここはテキスト></p>
     <p>&nbsp;</p> <!-- 空の段落 -->
-    <p><! ここはテキスト></p>
-    <p><! ここはテキスト></p>
-    <p>&nbsp;</p> <!-- 空の段落 -->
-
     <form action="/second">
     <div style="display: flex; justify-content: center;">
         <input type="submit" value="秀衡塗の使い方トップに戻る">
@@ -106,37 +140,30 @@
     </div>
 
     <div class="photo-grid1">
-        <img src="../static/images/セカンド 翁知屋ロゴのみphoto.jpg">
+        <img class="shikki_img1" src="../static/images/セカンド 翁知屋ロゴ透過photo.jpg">
     </div>
-
-    <! div class="photo-grid3">
-        <! img src="../static/images/セカンド 佐々木優弥写真背景photo.jpg">
-    <! /div>
     
     <div class="wrapper">
         <div class="photo-grid4">
-            <img src="../static/images/セカンド 佐々木優弥のみphoto.jpg">
-        </div>
-
-        <div class="title2">
-            <p class="header">現当主 佐々木 優弥 &nbsp;&nbsp;&nbsp;&nbsp;岩手県平泉町にて伝統工芸【秀衡塗】の製造販売</p>
-            <div class="title1">
-                <p class="header2">【主な実績】
-                    <br>･ 天皇皇后両殿下の御用食器一式 皇太子殿下献上品を製作
-                    <br>･ 2020東京オリンピック･パラリンピックの各国首脳･IOC役員への贈呈品に選定
-                    <br>･ 伊勢志摩サミットG7各国首脳への贈呈品に選定
-                    <br>･ 世界最高のデザイナー『マーク・ニューソン氏』をはじめ､国内外のデザイナーとの創作品
-                    <br>･ 集英社アニメ･ワンピース『ルフィ』､サンリオ『キティ』等､有名キャラクターとのコラボ製作
-                    <br>･ 2012グットデザイン賞 受賞
-                    <br>
-                    <br>2014年からいわて県南地域のものづくり企業を集めた『いわて県南エリア伝統工芸協議会』を結成
-                    <br>オープンファクトリー『五感市』を開催｡
-                </p>
-            </div>
+        <img class="shikki_img2" src="../static/images/セカンド 佐々木優弥のみphoto.jpg">
+    </div>
+    <div class="title2">
+        <p class="header">現当主 佐々木 優弥 &nbsp;&nbsp;&nbsp;&nbsp;岩手県平泉町にて伝統工芸【秀衡塗】の製造販売</p>
+        <div class="title1">
+            <p class="header2">【主な実績】
+                <br>･ 天皇皇后両殿下の御用食器一式 皇太子殿下献上品を製作
+                <br>･ 2020東京オリンピック･パラリンピックの各国首脳･IOC役員への贈呈品に選定
+                <br>･ 伊勢志摩サミットG7各国首脳への贈呈品に選定
+                <br>･ 世界最高のデザイナー『マーク・ニューソン氏』をはじめ､国内外のデザイナーとの創作品
+                <br>･ 集英社アニメ･ワンピース『ルフィ』､サンリオ『キティ』等､有名キャラクターとのコラボ製作
+                <br>･ 2012グットデザイン賞 受賞
+                <br>
+                <br>2014年からいわて県南地域のものづくり企業を集めた『いわて県南エリア伝統工芸協議会』を結成
+                <br>オープンファクトリー『五感市』を開催｡
+            </p>
         </div>
     </div>
 
-    <p><! ここはテキスト></p>
 
 </body>
 
